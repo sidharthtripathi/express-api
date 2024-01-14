@@ -5,6 +5,7 @@ import { postsRouter } from "./routes/posts";
 import { authRouter } from "./routes/auth";
 import { verifyUser } from "./middlewares/verifyUser";
 
+
 const app = express();
 app.use(express.json());
 app.use(verifyUser);
