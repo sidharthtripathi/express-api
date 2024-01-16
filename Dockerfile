@@ -8,5 +8,4 @@ RUN npx prisma generate
 COPY . ./
 RUN npx tsc -b
 ENV JWT_SECRET=jwtsupersecretkey
-ENTRYPOINT [ "node" ]
-CMD [ "dist" ]
+CMD npx prisma db push && node dist
